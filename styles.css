@@ -513,3 +513,17 @@ img { height: auto; }
   color: #3d6b66;
 }
 .logo-mark, .logo-text, .mark { display: none !important; }
+
+/* ---- Unique motion / section language ---- */
+/* AquaPaw motion — soft float / bounce */
+.reveal { opacity: 0; transform: translateY(30px); transition: .75s cubic-bezier(.34,1.56,.64,1); }
+.reveal.in { opacity: 1; transform: none; }
+.logo-drop, .mark { animation: apBob 3.2s ease-in-out infinite; }
+@keyframes apBob { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(-5px);} }
+.card { transition: transform .45s cubic-bezier(.34,1.56,.64,1); }
+.card:hover { transform: translateY(-12px) rotate(-.4deg); }
+.stat-box { transition: transform .35s; }
+.stat-box:hover { transform: scale(1.04); }
+.btn-sky, .btn-primary { transition: transform .35s cubic-bezier(.34,1.56,.64,1), background .25s; }
+.btn-sky:hover, .btn-primary:hover { transform: translateY(-4px) scale(1.03); }
+.review-card:hover { transform: translateY(-8px) rotate(.3deg); }
